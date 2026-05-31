@@ -1,4 +1,4 @@
-# FINACY
+﻿# FINACY
 
 Offline-first business management for small shops and micro-entrepreneurs.
 
