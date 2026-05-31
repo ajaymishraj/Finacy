@@ -1,0 +1,47 @@
+.gitignore for FINACY web project
+
+# --- OS files
+.DS_Store
+Thumbs.db
+
+# --- Node / package managers
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# --- Logs
+*.log
+
+# --- Environment files
+.env
+.env.*.local
+
+# --- Firebase local files / cache
+.firebase/
+firebase-debug.log
+
+# --- IDE / editor folders
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# --- Build / output folders
+dist/
+build/
+out/
+coverage/
+
+# --- Misc
+*.swp
+*.tmp
+*.bak
+
+# Optional: ignore Firebase client config if you prefer to keep it private
+# Uncomment the following line to ignore your local Firebase config file
+# firebase-config.js

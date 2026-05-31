@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0f172a" />
+    <title>Finacy – Dashboard</title>
+    <link rel="icon" href="fin.png?v=18" type="image/png" />
+    <link rel="stylesheet" href="style.css?v=9.2" />
+    <link rel="manifest" href="manifest.json" />
+
+    <!-- Firebase SDKs (Compat) -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics-compat.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="firebase-config.js"></script>
+    <script>
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      window.auth = firebase.auth();
+      window.db = firebase.firestore();
+      window.analytics = firebase.analytics();
+    </script>
+  </head>
+
+  <body>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+      <span class="logo">
+        <img
+          src="fin.png?v=18"
+          alt="Finacy"
+          style="height: 28px; vertical-align: middle; border-radius: 4px"
+        />
+      </span>
+    </header>
+
+    <div class="app">
+      <!-- Desktop Sidebar -->
+      <div class="sidebar">
+        <h2>
+          <img
+            src="fin.png?v=18"
+            alt="Finacy"
+            style="height: 30px; vertical-align: middle; border-radius: 6px"
+          />
+        </h2>
+        <button onclick="showPage('products')" data-page="products">
+          Products
+        </button>
+        <button onclick="showPage('reports')" data-page="reports">
+          Reports
+        </button>
+        <button onclick="window.location.href = 'about.html'">About</button>
+        <button onclick="logout()">Logout</button>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main">
+        <div id="productsPage"></div>
+        <div id="reportsPage" class="hidden"></div>
+      </div>
+    </div>
+
+    <!-- Bottom Navigation (Mobile) -->
+    <nav class="bottom-nav">
+      <button onclick="showPage('products')" data-page="products">
+        📦 <span>Products</span>
+      </button>
+      <button onclick="showPage('reports')" data-page="reports">
+        📊 <span>Reports</span>
+      </button>
+      <button onclick="window.location.href = 'about.html'">
+        ℹ️ <span>About</span>
+      </button>
+      <button onclick="logout()">🚪 <span>Logout</span></button>
+    </nav>
+
+    <div class="settings-fab-container" id="settingsFab">
+      <div class="fab-options">
+        <button
+          class="mini-btn"
+          onclick="
+            exportTextData();
+            toggleSettingsFab();
+          "
+          title="Export Text (JSON)"
+        >
+          Exp Text
+        </button>
+        <button
+          class="mini-btn"
+          onclick="
+            exportImagesData();
+            toggleSettingsFab();
+          "
+          title="Export Images (ZIP)"
+        >
+          Exp Img
+        </button>
+        <button
+          class="mini-btn"
+          onclick="
+            importData();
+            toggleSettingsFab();
+          "
+          title="Import Data"
+        >
+          Import
+        </button>
+      </div>
+      <button
+        class="fab-main-btn"
+        onclick="toggleSettingsFab()"
+        title="Settings"
+      >
+        ⚙️
+      </button>
+    </div>
+
+    <script src="app.js?v=6.0"></script>
+  </body>
+</html>

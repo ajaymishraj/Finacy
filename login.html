@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#2563eb" />
+    <meta property="og:image" content="fin.png" />
+    <title>Finacy - Login</title>
+    <link rel="icon" href="fin.png" type="image/png" />
+
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="style.css?v=9.1" />
+
+    <style>
+      /* Page-specific overrides if needed */
+      body {
+        background: var(--bg-color);
+        display: block; /* Reset flex from previous login page */
+        overflow-x: hidden;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="landing-nav">
+      <div class="nav-brand">
+        <!-- Logo Box with Blue Theme per request -->
+        <div
+          class="logo-box"
+          style="background: transparent; width: 100px; height: 100px"
+        >
+          <img
+            src="fin.png?v=18"
+            alt="Finacy Logo"
+            style="
+              width: 100%;
+              height: 100%;
+              border-radius: 4px;
+              object-fit: contain;
+            "
+          />
+        </div>
+      </div>
+      <div class="nav-actions">
+        <button class="btn-nav-secondary" onclick="toggleLogin()">
+          Log in
+        </button>
+        <button
+          class="btn-nav"
+          onclick="window.open('https://forms.gle/RT4ZLBFMpJiR2GCv7', '_blank')"
+        >
+          Get Started
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="hero-content">
+        <div class="version-badge">&bull; V2.0 Now Available</div>
+        <h1 class="hero-title">
+          Master Your <br />
+          Business <span class="highlight">Finances</span>
+        </h1>
+        <p class="hero-text">
+          The all-in-one command center for inventory, sales, and rentals.
+          Simplify your operations and focus on growth.
+        </p>
+        <div class="hero-buttons">
+          <button class="btn-hero" onclick="toggleLogin()">
+            Start Dashboard
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </button>
+          <button
+            class="btn-outline"
+            onclick="
+              document.querySelector('.features-section').scrollIntoView({
+                behavior: 'smooth',
+              })
+            "
+          >
+            Learn More
+          </button>
+        </div>
+      </div>
+
+      <!-- Right Side / Hover Area -->
+      <div class="hero-image-wrapper">
+        <!-- Hidden Product Image (CSS Dashboard Mockup) -->
+        <div class="product-image-container">
+          <div class="mock-window">
+            <div class="mock-dots">
+              <div class="dot dot-red"></div>
+              <div class="dot dot-yellow"></div>
+              <div class="dot dot-green"></div>
+            </div>
+            <div class="mock-grid">
+              <!-- Left Card -->
+              <div class="mock-card">
+                <div class="mock-lines">
+                  <div
+                    class="line short"
+                    style="
+                      background: var(--primary-light);
+                      height: 24px;
+                      width: 24px;
+                      border-radius: 6px;
+                    "
+                  ></div>
+                  <div class="line med"></div>
+                  <div class="line long"></div>
+                </div>
+              </div>
+              <!-- Right Card -->
+              <div class="mock-card">
+                <div class="mock-lines">
+                  <div
+                    class="line short"
+                    style="
+                      background: #e2e8f0;
+                      height: 24px;
+                      width: 24px;
+                      border-radius: 6px;
+                    "
+                  ></div>
+                  <div class="line med"></div>
+                </div>
+              </div>
+            </div>
+            <!-- Bottom Rows -->
+            <div
+              class="mock-card"
+              style="height: 40px; background: white; border: 1px solid #f1f5f9"
+            ></div>
+            <div
+              class="mock-card"
+              style="height: 40px; background: white; border: 1px solid #f1f5f9"
+            ></div>
+            <div
+              class="mock-card"
+              style="height: 40px; background: white; border: 1px solid #f1f5f9"
+            ></div>
+          </div>
+
+          <div
+            style="margin-top: 12px; display: flex; justify-content: flex-end"
+          >
+            <!-- Replit logo removed -->
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Features Section -->
+    <section class="features-section">
+      <h2 class="features-title">Everything you need to run your business</h2>
+      <p class="features-subtitle">
+        Powerful tools to help you manage products, track sales, and monitor
+        rentals with ease.
+      </p>
+
+      <div class="features-grid">
+        <!-- Card 1 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M12 20v-6M6 20V10M18 20V4" />
+            </svg>
+          </div>
+          <div class="feature-name">Inventory Management</div>
+          <div style="color: var(--text-muted); font-size: 14px">
+            Track stock levels, manage variants, and get low stock alerts in
+            real-time.
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+              <polyline points="22 4 12 14.01 9 11.01" />
+            </svg>
+          </div>
+          <div class="feature-name">Sales & Rentals</div>
+          <div style="color: var(--text-muted); font-size: 14px">
+            Process sales efficiently and manage product rentals with automated
+            tracking.
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+          </div>
+          <div class="feature-name">Secure & Reliable</div>
+          <div style="color: var(--text-muted); font-size: 14px">
+            Your business records stay on your device and remain under your
+            control.
+          </div>
+        </div>
+      </div>
+
+      <p class="features-subtitle" style="margin-top: 32px; text-align: center;">
+        Scroll down to read our Privacy Policy.
+      </p>
+    </section>
+
+    <section class="login-policy-section">
+      <h2>Finacy Privacy Policy</h2>
+      <p>
+        This policy explains exactly what Finacy stores, how it is protected,
+        and how you control it.
+      </p>
+      <p>Last updated: February 16, 2026</p>
+
+      <h3>Local storage of business records</h3>
+      <p>
+        Finacy stores your inventory, sales, rental records, and related app
+        content locally in your browser.
+      </p>
+      <ul>
+        <li>Business records remain on your device by default.</li>
+        <li>
+          Records are not automatically uploaded to external servers by
+          dashboard storage logic.
+        </li>
+        <li>
+          Data transfers happen only when you explicitly export or import
+          files.
+        </li>
+      </ul>
+
+      <ul>
+        <li>Authentication traffic is encrypted in transit.</li>
+        <li>Finacy does not store your password in plain text.</li>
+        <li>
+          Account verification is separate from local business-record storage.
+        </li>
+      </ul>
+
+      <h3>Encryption and technical safeguards</h3>
+      <ul>
+        <li>
+          HTTPS/TLS protects network traffic used for login and service
+          communication.
+        </li>
+        <li>
+          Browser storage is sandboxed per origin and subject to browser
+          security controls.
+        </li>
+        <li>
+          Device-level protection (for example full-disk encryption and OS
+          account security) remains user-managed.
+        </li>
+        <li>Finacy is designed to minimize data exposure.</li>
+      </ul>
+
+      <h3>5. Your control over information</h3>
+      <ul>
+        <li>Use dashboard Settings tools to export text and image data.</li>
+        <li>Import tools let you restore previously exported records.</li>
+        <li>
+          You can remove local records by clearing this site's browser data.
+        </li>
+      </ul>
+
+      <h3>6. Data protection principles</h3>
+      <p>
+        Finacy follows core principles often required by modern privacy
+        regulations, including transparency, minimization, purpose limitation,
+        user access, and deletion control. These controls are intended to align
+        with GDPR and CCPA-style expectations for user trust and informed
+        consent.
+      </p>
+
+      <h3>7. Contact</h3>
+      <p>
+        For privacy questions or requests, contact: finacyservices@gmail.com
+      </p>
+    </section>
+
+    <!-- Login Modal Overlay -->
+    <div id="loginOverlay" class="login-overlay">
+      <div class="login-box">
+        <button class="close-modal" onclick="toggleLogin()">&times;</button>
+
+        <div style="text-align: center; margin-bottom: 24px">
+          <div
+            class="logo-box"
+            style="margin: 0 auto 16px; width: 250px; height: 250px"
+          >
+            <img
+              src="fin.png?v=18"
+              alt="Logo"
+              style="
+                width: 100%;
+                height: 100%;
+                border-radius: 6px;
+                object-fit: contain;
+              "
+            />
+          </div>
+          <h2 style="font-size: 24px; margin: 0">Welcome Back</h2>
+          <p style="color: var(--text-muted); font-size: 14px">
+            Sign in to your dashboard
+          </p>
+        </div>
+
+        <div class="input-group">
+          <label for="emailInput">Email Address</label>
+          <input
+            id="emailInput"
+            class="input-field"
+            type="email"
+            placeholder="name@company.com"
+            autocomplete="email"
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="passInput">Password</label>
+          <input
+            id="passInput"
+            class="input-field"
+            type="password"
+            placeholder="Enter your password"
+          />
+        </div>
+
+        <button
+          class="btn-primary"
+          style="width: 100%; margin-top: 8px"
+          onclick="login()"
+        >
+          Sign In
+        </button>
+
+        <div
+          id="err"
+          style="
+            color: #ef4444;
+            font-size: 13px;
+            margin-top: 16px;
+            min-height: 20px;
+            text-align: center;
+          "
+        ></div>
+
+        <div style="text-align: center; margin-top: 24px">
+          <!-- Registration link removed as requested -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Firebase SDKs (Compat) -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics-compat.js"></script>
+    <script src="firebase-config.js"></script>
+
+    <script>
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const auth = firebase.auth();
+      const db = firebase.firestore();
+      const analytics = firebase.analytics();
+
+      const emailInput = document.getElementById("emailInput");
+      const passInput = document.getElementById("passInput");
+      const err = document.getElementById("err");
+      const loginOverlay = document.getElementById("loginOverlay");
+
+      // Auto-focus logic
+      // Only focus if modal is open
+
+      function toggleLogin() {
+        loginOverlay.classList.toggle("active");
+        if (loginOverlay.classList.contains("active")) {
+          setTimeout(() => emailInput.focus(), 100);
+        }
+      }
+
+      // Close modal on outside click
+      loginOverlay.addEventListener("click", (e) => {
+        if (e.target === loginOverlay) toggleLogin();
+      });
+
+      // Enter key support
+      function handleEnter(e) {
+        if (e.key === "Enter") login();
+      }
+      emailInput.addEventListener("keyup", handleEnter);
+      passInput.addEventListener("keyup", handleEnter);
+
+      function login() {
+        const email = emailInput.value;
+        const pass = passInput.value;
+
+        if (!email || !pass) {
+          err.innerText = "Please fill in all fields";
+          return;
+        }
+
+        err.innerText = "Signing in...";
+        auth
+          .signInWithEmailAndPassword(email, pass)
+          .then((cred) => {
+            // Success
+            window.location.href = "app.html";
+          })
+          .catch((error) => {
+            console.error(error);
+            err.innerText = "Invalid credentials. Please try again.";
+          });
+      }
+    </script>
+  </body>
+</html>
