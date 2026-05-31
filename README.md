@@ -34,36 +34,3 @@ IndexedDB is powerful but requires careful schema and query design for good perf
 Screenshots
 
 ![Finacy screenshot](finacyss.png)
-
-Quick start
-
-- Open `app.html` or `login.html` in your browser.
-
-- To run a simple local server:
-
-```bash
-python -m http.server 8000
-# then open http://localhost:8000/app.html
-```
-
-Firebase deploy
-
-- Install the Firebase CLI:
-
-```bash
-npm install -g firebase-tools
-```
-
-- Login and deploy (uses existing `firebase.json` if present):
-
-```bash
-firebase login
-firebase deploy --only hosting
-```
-
-Notes
-
-- Review `.gitignore` to keep secrets out of the repository.
-- If you prefer to keep your Firebase config private, uncomment `firebase-config.js` in `.gitignore`.
-
-If you'd like, I can commit and push these changes to your GitHub repository.
